@@ -1,0 +1,54 @@
+rio<-read.csv(file.choose(), header=TRUE)
+> cf<-read.csv(file.choose(), header=TRUE)
+> ib<-read.csv(file.choose(), header=TRUE)
+> all<-read.csv(file.choose(), header=TRUE)
+> data(rio)
+> data(cg)
+> data(cf)
+> data(ib)
+> data(all)
+> resrio<-accumresult(rio, method='exact')
+> rescf<-accumresult(cf, method='exact')
+> resall<-accumresult(all, method='exact')
+> resib<-accumresult(ib, method='exact')
+> divrio <- diversityresult(rio, index='Simpson' ,method='s', sortit=TRUE, digits=3)
+> divcf <- diversityresult(cf, index='Simpson' ,method='s', sortit=TRUE, digits=3)
+> divib <- diversityresult(ib, index='Simpson' ,method='s', sortit=TRUE, digits=3)
+> divall <- diversityresult(all, index='Simpson' ,method='s', sortit=TRUE, digits=3)
+> plot(resrio)
+> plot(rescf)
+> plot(resib)
+> plot(resall)
+> summary(divrio)
+    Simpson     
+ Min.   :0.792  
+ 1st Qu.:0.858  
+ Median :0.884  
+ Mean   :0.872  
+ 3rd Qu.:0.896  
+ Max.   :0.929  
+> summary(divcf)
+    Simpson     
+ Min.   :0.900  
+ 1st Qu.:0.914  
+ Median :0.923  
+ Mean   :0.922  
+ 3rd Qu.:0.929  
+ Max.   :0.951  
+> summary(divib)
+    Simpson     
+ Min.   :0.804  
+ 1st Qu.:0.870  
+ Median :0.901  
+ Mean   :0.885  
+ 3rd Qu.:0.910  
+ Max.   :0.927  
+> summary(divall)
+    Simpson     
+ Min.   :0.792  
+ 1st Qu.:0.878  
+ Median :0.902  
+ Mean   :0.893  
+ 3rd Qu.:0.924  
+ Max.   :0.951  
+> 
